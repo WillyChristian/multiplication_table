@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./components/headTemplate.ejs'); %> 
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <%- include("./components/navigation.ejs"); %>
+  </header>
+  <main id="home">
+    <section class="content">
+      <h1 class="title">Seja bem vindo ao app Tabuada</h1>
+      <h3>Escolha a tabuada que deseja ver:</h3>
+      <div class="numbers">
+        <% numbersList.forEach( (number, index) => { %>
+          <div class="numbers__container">
+            <a class="numbers__link" href="/table/<%= (index + 2) %>" >
+              <%= number %>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

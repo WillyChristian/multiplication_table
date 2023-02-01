@@ -1,0 +1,31 @@
+@use '../global' as *;
+
+.navbar {
+  height: 5rem;
+  background-color: $blue300;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $pureWhite;
+    &:hover {
+      color: $blue500;
+    }
+
+    &[aria-disabled='true'] {
+      pointer-events: none;
+      color: $black600;
+    }
+  }
+}

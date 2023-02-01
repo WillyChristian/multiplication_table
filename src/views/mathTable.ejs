@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./components/headTemplate.ejs'); %> 
+  <title>Tabuada do <%= number %> </title>
+</head>
+<body>
+  <header>
+    <%- include("./components/navigation.ejs"); %>
+  </header>
+  <main id="math_table">
+    <section class="content">
+      <h1 class="title">Essa é a tabuada do <%= number %></h1>
+      <div class="table">
+        <% table.forEach( (value, index) => { %>
+          <div class="table__item">
+            <p class="table__item-item"><%= number %></p>
+            <p class="table__item-item">X</p>
+            <p class="table__item-item"><%= (index + 1) %></p>
+            <p class="table__item-item">=</p>
+            <p class="table__item-item"><%= value %></p>
+          </div>
+        <% }) %>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
