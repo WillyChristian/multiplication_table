@@ -28,16 +28,19 @@
       row-gap: 0.25rem;
       grid-template-rows: repeat(10, 1fr);
 
+      @media (min-width: $commonScreen) {
+        width: 70%;
+      }
+
       &__item {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
 
         &-item {
-          padding: 0.5rem;
-          @media (min-width: $commonScreen) {
-            padding: .5rem 2rem;
-          }
+          justify-self: center;
+          padding: 1rem 0.5rem;
+          margin: 0;
         }
       }
 
