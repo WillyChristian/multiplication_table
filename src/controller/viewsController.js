@@ -1,5 +1,5 @@
 const home = (req, res) => {
-  const arrNumbersName = [
+  const numbersList = [
     'Dois',
     'Tres',
     'Quatro',
@@ -10,13 +10,7 @@ const home = (req, res) => {
     'Nove',
   ];
   res.render('home', {
-    numbersList: arrNumbersName,
-  });
-};
-
-const about = (req, res) => {
-  res.render('about', {
-    name: 'Jose',
+    numbersList
   });
 };
 
@@ -35,7 +29,6 @@ const mathTable = (req, res) => {
 };
 
 module.exports = {
-  about,
   home,
   mathTable,
 };
